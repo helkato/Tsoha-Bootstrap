@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Mittauspaikat</h1>
+
+<p> Tällä sivulla luetteloidaan mittauspaikat. </p>
+<p> Lisätiedot-painike vie mittauspaikan omalle sivulle, jossa paikan tietoja
+    voi muokata tai poistaa.</p>
+
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Yksilöivä tunniste</th>
+            <th>Nimi</th>
+            <th>GPS / sijainti</th>
+            <th>Paikan kuvaus</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1 </td>
+            <td>Bodom, Oittaan uimaranta</td>
+            <td>60.241306, 24.660092</td>
+            <td>Oittaan leirintäalueen viereisen uimarannan rantavesi</td>
+            <td><button class="btn btn-default">Lisätiedot</button></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Bodom, Bodomin kartanon golf-kenttä</td>
+            <td>60.262366,24.680772 </td>
+            <td>Golf-kentän rantavedet</td>
+            <td><button class="btn btn-default">Lisätiedot</button></td>
+        </tr>
+       
+    </tbody>
+</table>
+
+
+
+<p>
+    <button  class="btn btn-success">Lisää mittauspaikka</button>
+</p>
+
+
+
+{% endblock %}
+

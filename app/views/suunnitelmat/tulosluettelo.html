@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Tulokset</h1>
+
+
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Pvm</th>
+            <th>Paikan tunniste</th>
+            <th>Paikka</th>
+            <th>Mittaus</th>
+            <th>Tulos</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1.7.2017</td>
+            <td>1</td>
+            <td>Bodom, Oittaan uimaranta</td>
+            <td>Sinileväpitoisuus</td>
+            <td>xx.x</td>
+            <td><button class="btn btn-default">Lisätiedot</button></td>
+        </tr>
+        <tr>
+           <td>1.7.2017</td>
+            <td>2</td>
+            <td>Bodom, kartanon golf-kenttä</td>
+            <td>Sinileväpitoisuus</td>
+            <td>xx.y</td>
+            <td><button class="btn btn-default">Lisätiedot</button></td>
+        </tr>
+         <tr>
+           <td>1.7.2017</td>
+            <td>3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><button class="btn btn-default">Lisätiedot</button></td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+
+<p>
+    <button  class="btn btn-success">Lisää mittaustulos</button>
+</p>
+
+
+
+{% endblock %}

@@ -28,6 +28,7 @@
   // Otetaan Composer käyttöön
   require 'vendor/autoload.php';
 
+  // Alustetaan Slim-reitityskirjasto
   $routes = new \Slim\Slim();
   $routes->add(new \Zeuxisoo\Whoops\Provider\Slim\WhoopsMiddleware);
 

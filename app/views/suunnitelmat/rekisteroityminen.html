@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Vesistötutkimus</h1>
+    <p> Vesistötutkimuksen mittaustulosten kirjauspalvelu</p>
+</div>
+
+
+<h3>Rekisteröidy</h3>
+
+<form>
+
+    <!-- Käyttäjätunnus-->
+
+    <div class="form-group">
+        <label>Käyttäjätunnus</label>
+        <input type="text" class="form-control">
+    </div>
+
+    <!-- Salasana -->
+    <div class="form-group">
+        <label>Salasana</label>
+        <input type="password" class="form-control">
+    </div>
+
+
+    <!-- Salasana uudelleen-->
+    <div class="form-group">
+        <label>Salasana uudelleen</label>
+        <input type="password" class="form-control">
+    </div>
+
+    <select>
+        <option value="suunnittelija">Suunnittelija</option>
+        <option value="mittaaja">Mittaaja</option>
+        <option value="laboratorio">Laboratorio</option>
+        <option value="asiakas">Asiakas</option>
+    </select>
+    
+    <input type="checkbox" name="ehdot">Hyväksyn käyttöehdot<br>
+
+    <button type="submit" class="btn btn-primary">Rekisteröidy</button>
+</form>
+
+
+{% endblock %}

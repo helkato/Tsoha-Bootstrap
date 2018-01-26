@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Vesistötutkimus</h1>
+    <p> Vesistötutkimuksen mittaustulosten kirjauspalvelu</p>
+</div>
+
+
+<h3>Kirjaudu sisään</h3>
+
+<form>
+
+    <!-- Käyttäjätunnus-->
+
+    <div class="form-group">
+        <label>Käyttäjätunnus</label>
+        <input type="text" class="form-control">
+    </div>
+
+    <!-- Salasana -->
+    <div class="form-group">
+        <label>Salasana</label>
+        <input type="password" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Kirjaudu sisään</button>
+</form>
+
+<br>
+<br>
+
+<h3>Eikö sinulla ole tunnuksia?</h3>
+<a href="rekisteroityminen.html" class="btn btn-primary">Rekisteröitymiseen</a>
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Muokkaa mittausta: Mittaus A</h1>
+
+
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Nimi</th>
+            <th>Mittaus A</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Kuvaus</td>
+            <td>Veden happamuus (pH)</td>
+        </tr>
+        <tr>
+            <td>Työohje</td>
+            <td>Kuvataan mittauksen suoritustapa.</td>
+        </tr>
+        <tr>
+            <td>Välineet</td>
+            <td>Kerrotaan, millä välineillä mittaus suoritetaan</td>
+        </tr>
+        <tr>
+            <td>Ajankohta</td>
+            <td>Mittausajankohta? Montako kertaa toistetaan vuosittain? tms</td>
+        </tr>
+        <tr>
+            <td>Dokumentointiohje</td>
+            <td>Erityisohjeet tulosten dokumentoimiseen.</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+<p>
+    <button  class="btn btn-default">Tallenna</button>
+</p>
+
+
+
+{% endblock %}

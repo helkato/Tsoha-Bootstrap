@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Mittaukset</h1>
+
+<p> Tällä sivulla luetteloidaan vesistötutkimuksen mittaukset. </p>
+<p> Lisätiedot-painike vie mittauksen omalle sivulle, jossa kerrotaan mittausohjeet. 
+    Sivulla voi muokata mittauksen tietoja tai poistaa mittauksen.</p>
+
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Nimi</th>
+            <th>Kuvaus (50 merkkiä)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mittaus A</td>
+            <td>Veden happamuus (pH)</td>
+            <td><button class="btn btn-default">Lisätiedot</button></td>
+        </tr>
+        <tr>
+            <td>Mittaus B</td>
+            <td>Mittauksen kuvaus</td>
+            <td><button class="btn btn-default">Lisätiedot</button></td>
+        </tr>
+        <tr>
+            <td>Mittaus C</td>
+            <td>Mittauksen kuvaus</td>
+            <td><button class="btn btn-default">Lisätiedot</button></td>
+        </tr>
+        <tr>
+            <td>Mittaus D</td>
+            <td>Mittauksen kuvaus</td>
+            <td><button class="btn btn-default">Lisätiedot</button></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+<p>
+    <button  class="btn btn-success">Lisää uusi mittaus tai työohje</button>
+</p>
+
+
+
+{% endblock %}
