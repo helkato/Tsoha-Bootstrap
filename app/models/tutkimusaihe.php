@@ -28,13 +28,16 @@ class Tutkimusaihe extends BaseModel {
         return $tutkimusaiheet; //palautetaan tutkimusaiheet-taulukko
     }
 
+    // metodi yksittäisen tutkimusaihesivun näyttämiseksi EI TOIMI!!
     public static function find($id) {
-        $query = DB::connection()->prepare('SELECT * FROM Tutkimusaihe WHERE id = :id LIMIT 1');
+        $query = DB::connection()->prepare('SELECT * FROM Tutkimusaihe WHERE id=:id LIMIT 1');
         $query->execute(array('id' => $id));
         $row = $query->fetch();
 
+        //$aihe = array();
+
         if ($row) {
-            $tutkimusaihe = new Tutkimusaihe(array(
+            $tutkimusaihe[] = new Tutkimusaihe(array(
                 'id' => $row['id'],
                 'nimi' => $row['nimi'],
                 'tavoitteet' => $row['tavoitteet']
@@ -42,6 +45,7 @@ class Tutkimusaihe extends BaseModel {
             return $tutkimusaihe;
         }
         return null;
-    } 
-
+    }
+    
+    
 }
