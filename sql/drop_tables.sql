@@ -1,5 +1,6 @@
 -- Lisää DROP TABLE lauseet tähän tiedostoon
 
+DROP TYPE IF EXISTS kayttajaryhma CASCADE;
 DROP TABLE IF EXISTS Kayttaja CASCADE;
 DROP TABLE IF EXISTS Vesisto CASCADE;
 DROP TABLE IF EXISTS Naytteenottopaikka CASCADE;
