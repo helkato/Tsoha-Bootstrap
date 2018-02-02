@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Vesistöt</h1>
+
+<p> 
+    Tällä sivulla luetteloidaan tietokannassa olevat vesistöt. 
+</p>
+
+<p> 
+    Lisätiedot-painike vie sivulle, jolla voi tarkastella ja muokata vesistön
+    tietoja.
+</p>
+
+<p>
+    <button  class="btn btn-success">Lisää vesistö</button>
+</p>
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nimi</th>
+            <th>Tyyppi</th>
+            <th>Kuvaus</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for vesisto in vesistot %}
+        <tr>
+            <td><a href="{{base_path}}/vesisto/{{vesisto.id}}"> {{vesisto.id}}</td>
+            <td>{{vesisto.nimi}}</td>
+            <td>{{vesisto.tyyppi}}</td>
+             <td>{{vesisto.kuvaus}}</td>
+            <td><a class="btn btn-default btn-sm" href="{{base_path}}/vesisto/{{vesisto.id}}">Lisätiedot</a></td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+
+
+
+
+
+
+
+{% endblock %}
+
