@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Vesistö</h1>
+
+<p> 
+    Yhden vesistön tietojen yhteenvetosivu.
+</p>
+
+<p>
+    <a href="{{base_path}}/vesisto"> Palaa yhteenvetosivulle</a>
+</p>
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nimi</th>
+            <th>Tyyppi</th>
+            <th>Kuvaus</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for vesisto in vesisto %}
+        <tr>
+            <td>{{vesisto.id}}</td>
+            <td>{{vesisto.nimi}}</td>
+            <td>{{vesisto.tyyppi}}</td>     
+            <td>{{vesisto.kuvaus}}</td> 
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+
+
+
+
+
+
+
+{% endblock %}
+

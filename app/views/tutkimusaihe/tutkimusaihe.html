@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Tutkimusaihe</h1>
+
+<p> 
+    Yhdne tutkimusaiheen yhteenvetosivu
+</p>
+
+<p> 
+    Tällä sivulla luetellaan tutkimusaiheeseen kuuluvat tutkimukset.
+</p>
+
+<p>
+    <button  class="btn btn-success">Lisää tutkimus</button>
+</p>
+
+<p>
+    <a href="{{base_path}}/tutkimusaihe"> Palaa yhteenvetosivulle</a>
+</p>
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nimi</th>
+            <th>Tavoitteet</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for tutkimusaihe in tutkimusaihe%}
+        <tr>
+            <td>{{tutkimusaihe.id}}</td>
+            <td>{{tutkimusaihe.nimi}}</td>
+            <td>{{tutkimusaihe.tavoitteet}}</td>           
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+
+
+
+
+
+
+
+{% endblock %}
+
