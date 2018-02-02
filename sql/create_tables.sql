@@ -1,6 +1,5 @@
 -- Lisää CREATE TABLE lauseet tähän tiedostoon
 
-
 CREATE TABLE Vesisto(
 id SERIAL PRIMARY KEY,
 nimi varchar(70) NOT NULL,
