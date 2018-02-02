@@ -54,7 +54,7 @@ dokumentointi varchar(400)
 CREATE TABLE Kenttamittaus(
 id SERIAL PRIMARY KEY,
 aika TIMESTAMP,
-tekija varchar(100),
+tekija INTEGER REFERENCES Kayttaja(id),
 id_tutkimus INTEGER REFERENCES Vesistotutkimus(id)
 );
 
