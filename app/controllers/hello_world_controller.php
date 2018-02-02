@@ -1,5 +1,7 @@
 <?php
 
+//require 'app/models/tutkimusaihe.php'; --lisätty composer.json-tiedostoon
+
 class HelloWorldController extends BaseController {
 
     // Palvelun etusivu, josta kirjaudutaan sisään; myös linkki rekisteröitymiseen
@@ -58,10 +60,26 @@ class HelloWorldController extends BaseController {
         View::make('suunnitelmat/tulosluettelo.html');
     }
 
+    // tutkimusaiheiden tarkasteleminen luettelona
+    public static function tutkimusaiheet() {
+        View::make('suunnitelmat/tutkimusaiheet.html');
+    }
+    
     // Testaa koodiasi täällä
     public static function sandbox() {
         View::make('helloworld.html');
-        //echo 'This is sandbox!';
+        echo 'This is sandbox!';
+
+        $perus = Tutkimusaihe::find(11);
+        $perus2 = Tutkimusaihe::find(12);
+        $kaikki = Tutkimusaihe::all();
+
+        // Kint-luokan dump-metodi tulostaa muuttujan arvon
+        Kint::dump($perus);
+        Kint::dump($perus);
+        Kint::dump($perus2);
+        Kint::dump($kaikki);
+
     }
 
 }
