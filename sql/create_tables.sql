@@ -1,5 +1,15 @@
 -- Lisää CREATE TABLE lauseet tähän tiedostoon
 
+CREATE TYPE kayttajaryhma AS ENUM ('suunnittelija', 'mittaaja', 'laboratorio', 'asiakas');
+
+CREATE TABLE Kayttaja(
+id SERIAL PRIMARY KEY,
+nimi varchar(70) NOT NULL,
+rooli kayttajaryhma NOT NULL,
+tyyppi varchar(35),
+kuvaus varchar(350)
+);
+
 CREATE TABLE Vesisto(
 id SERIAL PRIMARY KEY,
 nimi varchar(70) NOT NULL,
@@ -63,5 +73,3 @@ lisatiedot varchar(500),
 id_mittaus INTEGER REFERENCES Kenttamittaus(id),
 id_nayte INTEGER REFERENCES Nayte(id)
 );
-
-
