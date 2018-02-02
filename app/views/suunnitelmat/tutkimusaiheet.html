@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Tutkimusaiheet</h1>
+
+<p> 
+    Tällä sivulla luetteloidaan tutkimusaiheet. 
+</p>
+<p> 
+    Muokkaa-painikkeella pääset muokkaamaan tutkimusaiheen tietoja.
+</p>
+<p> 
+    Tutkimukset-painike sivulle, jossa luetellaan tutkimusaiheeseen kuuluvat
+    tutkimukset.
+</p>
+
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Yksilöivä tunniste</th>
+            <th>Nimi</th>
+            <th>Tavoitteet</th>
+            <th>Muokkaa</th>
+            <th>Lisätiedot</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1 </td>
+            <td>Perustutkimukset</td>
+            <td>Vesien tilan yleinen seuranta</td>
+            <td><button class="btn btn-default">Muokkaa</button></td>
+            <td><button class="btn btn-default">Tutkimukset</button></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Happamuus</td>
+            <td>Seurata happamien sateiden vaikutuksia</td>
+            <td><button class="btn btn-default">Muokkaa</button></td>
+            <td><button class="btn btn-default">Tutkimukset</button></td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+
+<p>
+    <button  class="btn btn-success">Lisää tutkimusaihe</button>
+</p>
+
+
+
+{% endblock %}
+
