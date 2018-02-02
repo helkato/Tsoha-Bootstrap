@@ -6,8 +6,8 @@ CREATE TABLE Kayttaja(
 id SERIAL PRIMARY KEY,
 nimi varchar(70) NOT NULL,
 rooli kayttajaryhma NOT NULL,
-tyyppi varchar(35),
-kuvaus varchar(350)
+kayttajatunnus varchar(35),
+salasana varchar(350)
 );
 
 CREATE TABLE Vesisto(
