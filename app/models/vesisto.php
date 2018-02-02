@@ -35,7 +35,7 @@ class Vesisto extends BaseModel {
         $query->execute(array('id' => $id));
         $row = $query->fetch();
 
-       // $vesisto = array();  // voiko taulukon luomisen jättää pois?
+        // $vesisto = array();  // voiko taulukon luomisen jättää pois?
 
         if ($row) {
             $vesisto[] = new Vesisto(array(
@@ -47,6 +47,18 @@ class Vesisto extends BaseModel {
             return $vesisto;
         }
         return null;
+    }
+
+    //näyttää html-lomakkeen
+    public function create() {
+        
+    }
+
+    public function save() {
+        $query = DB::connection()->prepare('INSERT INTO Vesisto (nimi, tyyppi, kuvaus) VALUES(:nimi, :tyyppi, :kuvaus) RETURNING id');
+        $query->execute(array('nimi' => $this->nimi, 'tyyppi' => $this->tyyppi, 'kuvaus' => $this->kuvaus));
+        $row = $query->fetch();
+        $this->id = $row['id'];
     }
 
 }
