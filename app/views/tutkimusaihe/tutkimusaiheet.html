@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Tutkimusaiheet</h1>
+
+<p> 
+    Tällä sivulla luetteloidaan tutkimusaiheet. 
+</p>
+
+<p> 
+    Lisätiedot-painike vie sivulle, jolla voi muokata tutkimusaiheen 
+    tietoja ja jolla on luettelo tutkimusaiheeseen kuuluvista tutkimuksista.
+</p>
+
+<p>
+    <button  class="btn btn-success">Lisää tutkimusaihe</button>
+</p>
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nimi</th>
+            <th>Tavoitteet</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for tutkimusaihe in tutkimusaiheet %}
+        <tr>
+            <td><a href="{{base_path}}/tutkimusaihe/{{tutkimusaihe.id}}"> {{tutkimusaihe.id}}</td>
+            <td>{{tutkimusaihe.nimi}}</td>
+            <td>{{tutkimusaihe.tavoitteet}}</td>
+            <td><a class="btn btn-default btn-sm" href="{{base_path}}/tutkimusaihe/{{tutkimusaihe.id}}">Lisätiedot</a></td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+
+
+
+
+
+
+
+{% endblock %}
+
