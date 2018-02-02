@@ -22,4 +22,29 @@ class VesistoController extends BaseController {
         View::make('vesisto/vesisto.html', array('vesisto' => $vesisto));
     }
 
+    // Vesistön lisäyslomakkeen näyttäminen
+    public static function create() {
+        $vesisto = Vesisto::create();
+        View::make('vesisto/new.html', array('vesisto' => $vesisto));
+  
+    }
+
+    // Vesistön lisääminen tietokantaan
+    public static function store() {
+        $params = $_POST;
+
+        $vesisto = new Vesisto(array(
+            'nimi' => $params['nimi'],
+            'tyyppi' => $params['tyyppi'],
+            'kuvaus' => $params['kuvaus']
+        ));
+
+        Kint::dump($params);
+
+        $vesisto->save();
+
+
+        Redirect::to('/vesisto' . $vesisto->id, array('message' => 'Vesistö on lisätty tietokantaan.'));
+    }
+
 }
