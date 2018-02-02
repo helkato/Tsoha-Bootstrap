@@ -20,10 +20,22 @@ $routes->get('/vesisto/:id', function($id){
     VesistoController::show($id);
 });
 
+// Vesistön lisääminen tietokantaan
+$routes->post('/vesisto', function(){
+    VesistoController::store();
+});
+
+//Vesistön lisäyslomakkeen näyttäminen
+$routes->get('/vesisto/new', function(){
+    VesistoController::create();
+});
 
 
 
 
+
+
+// Alla alustavan suunnitteluvaiheen tietoja
 
 
 $routes->get('/', function() {
